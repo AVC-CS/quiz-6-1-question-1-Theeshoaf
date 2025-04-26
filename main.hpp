@@ -19,7 +19,7 @@ bool isPrime(int n){
     if (n<2){
         return false;
     }
-    for (int i=2; i<sqrt(n);i++){
+    for (int i=2; i<=sqrt(n);i++){
         if(n%i == 0){
             return false;
         }
@@ -38,12 +38,13 @@ void getTwoValues(int &begin, int &end){
 int getNextPrime(int start){
     int n = (start + 1);
     while (true){
-        if (isPrime(n))}{
+        if (isPrime(n)){
             return n;
         }
         n++;
     }
 }
+
 
 int getPrevPrime(int end){
     int n = (end - 1);
