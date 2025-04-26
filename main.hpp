@@ -24,6 +24,7 @@ bool isPrime(int n){
             return false;
         }
     }
+    return true;
 }
 
 void getTwoValues(int &begin, int &end){
@@ -34,13 +35,23 @@ void getTwoValues(int &begin, int &end){
     while (begin >= end);
 }
 
+int getNextPrime(int start){
+    int n = (start + 1);
+    while (true){
+        if (isPrime(n))}{
+            return n;
+        }
+        n++;
+    }
+}
+
 int getPrevPrime(int end){
     int n = (end - 1);
     while (n>1){
         if (isPrime(n)){
             return n;
-            --n;
         }
+        n--;
     }
     return -1;
 }
